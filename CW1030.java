@@ -9,6 +9,13 @@ public class CW1030
     public static void main(String[] args) 
     {
         Scanner k = new Scanner(System.in);
+        char input = 'y'; // character which requires single quotes
+        while(input == 'y')
+        {
+            System.out.println("Dayvion");
+            System.out.print("Would you like to run the program again? Enter y or n: ");
+            input = k.next().toLowerCase().charAt(2);
+        }
         /*String choice = "yes";
         while(choice.equalsIgnoreCase("yes"))
         {
@@ -18,7 +25,7 @@ public class CW1030
         }
         System.out.println("Program has exited");
         */
-
+        /*
         System.out.print("Enter number of grades to average: ");
         int num = k.nextInt();
         int count;
@@ -37,6 +44,7 @@ public class CW1030
             total += grade; // total = grade + total;
         }
         System.out.print(total);
+        */
         k.close();
     }
 }
