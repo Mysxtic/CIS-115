@@ -18,15 +18,23 @@ public class CW1030
         }
         System.out.println("Program has exited");
         */
+
         System.out.print("Enter number of grades to average: ");
         int num = k.nextInt();
         int count;
-        double total = 0; // acumulator must be initialized to zero
-        for(count = 0; count < num; count++)
+        double total = 0; // accumulator must be initialized to zero
+        for(count = 1; count <= num; count++)
         {
-            System.out.print("Enter a grade: ");
+            System.out.print("Enter a grade #" + count + ": ");
             int grade = k.nextInt();
-            total += grade; // total = grade + 0
+            while(grade < 0 || grade > 100)
+            {
+            System.out.println("Bad grade Try again");
+            System.out.println("Grades must be between 0 and 100 only!");
+            System.out.print("Enter a grade #" + count + ": ");
+            grade = k.nextInt();
+            }
+            total += grade; // total = grade + total;
         }
         System.out.print(total);
         k.close();
