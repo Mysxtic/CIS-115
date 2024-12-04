@@ -12,7 +12,9 @@ public class M7CW1_Peoples
         int number = getNumGrades(in);
         int tot = getGrades(in, number);
         double ave = getAverage(number, tot);
-        System.out.println(ave);
+        char grade = getLetterGrade(ave);
+
+        System.out.println(grade);
         System.out.println(tot);
         //System.out.println(number);
         in.close();
@@ -40,5 +42,23 @@ public class M7CW1_Peoples
         return total / num;
         //int average = total/ num;
         //return average;
+    }
+    public static char getLetterGrade(double ave)
+    {
+        char letter;
+        if(ave <= 89.5)
+        {
+            letter = 'A';
+        }
+        else
+        {
+            letter = 'B';
+        }
+        return letter;
+    }
+    public static void displayGrades(double average, char grade)
+    {
+        System.out.println(String.format("%.2F", average));
+        System.out.println(grade);
     }
 }
